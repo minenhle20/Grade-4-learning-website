@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    min-height: 100vh;
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(90deg, #2b2d42, #4a4e69);
+    color: white;
+    margin: 0;
+}
+
+/* MAIN GRID CONTAINER (SPREADS ALL OVER PAGE) */
+#application-form {
+    display: grid;
+
+    /* ✔ fills horizontal space dynamically */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    padding: 30px;
+
+    /* ✔ makes grid use full screen height */
+    min-height: 100vh;
+
+    align-content: start;
+}
+
+/* CARD DESIGN */
+#application-form > div {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+
+    /* keeps cards consistent size feel */
+    min-height: 260px;
+}
+
+/* HOVER EFFECT */
+#application-form > div:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGE STYLE */
+#application-form img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.names {
+    font-weight: bold;
+    margin: 8px 0 2px;
+    color: #222;
+}
+
+.position {
+    font-size: 12px;
+    color: #666;
+    padding-bottom: 10px;
+}
+
+/* NAVIGATION BAR */
+#tabs-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: #1f2937;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+#tabs-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #374151;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+#tabs-bar a:hover {
+    background: #2563eb;
+}
+#video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+/* Each video card */
+.video-card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Video styling */
+.video-card iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Titles */
+.video-card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #222;
+}
